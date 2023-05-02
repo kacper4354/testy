@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var test = "B"
+        var odlicz = 0
+        var count
+        var xd
+        var test1 = 0
+        switch (test)
+        {
+            case "A": document.write("1 <br />")
+            break
+            case "B": document.write("2 <br />")
+            break
+            case "C": document.write("3 <br />")
+            break
+            case "D": document.write("4 <br />")
+            break
+        }
+        while(odlicz<=10) {
+            document.write("Liczba wynosi: " + odlicz + "<br />")
+            odlicz++
+        }
+        for(count = 0; count <= 10; count++) {
+            document.write("Aktualny forek: " + count + "<br />")
+        }
+        for(xd in navigator) {
+            document.write(xd + "<br />")   
+        }
+        while(test1<10) {
+            test1++
+            document.write("T: " + test1 + "<br />")
+            if (test1 == 5){
+                break;
+            }
+        }
+        while(test1<10) {
+            test1++
+            if(test1==7) {
+                continue
+            }
+            document.write("D: " + test1 + "<br />")
+        }
+        outerloop:
+        for(var i=0; i<10; i++)
+        {
+            document.write("Z: " + i + "<br />")
+            innerloop:
+            for(var j=0; j<7; j++) {
+                if(j==4) {
+                    break
+                }
+                if(i == 3) {
+                    break innerloop; 
+                }
+                if(i==6) {
+                    break outerloop
+                }
+                document.write("W: " + j + "<br />")
+            }
+
+        }
+    </script>
+</body>
+</html>
